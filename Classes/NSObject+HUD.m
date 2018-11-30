@@ -42,8 +42,8 @@ static char activityHUDKey;
     hud.userInteractionEnabled = NO;
     hud.mode = MBProgressHUDModeText;
     hud.detailsLabel.text = text;
-    hud.contentColor = HexRGB(0xffffff);
-    hud.bezelView.color = HexRGBWithAlpha(0x000000, 0.8);
+    hud.contentColor = [UIColor whiteColor]
+    hud.bezelView.color = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
     hud.detailsLabel.font = font;
     hud.margin = 10.f;
     hud.removeFromSuperViewOnHide = YES;
@@ -63,8 +63,8 @@ static char activityHUDKey;
     hud.userInteractionEnabled = NO;
     hud.mode = MBProgressHUDModeText;
     hud.detailsLabel.text = text;
-    hud.contentColor = HexRGB(0xffffff);
-    hud.bezelView.color = HexRGBWithAlpha(0x000000, 1);
+    hud.contentColor = [UIColor whiteColor]
+    hud.bezelView.color = [UIColor blackColor];
     hud.detailsLabel.font = [UIFont systemFontOfSize:15];
     hud.margin = 10.f;
     hud.removeFromSuperViewOnHide = YES;
@@ -81,8 +81,8 @@ static char activityHUDKey;
     self.overlay.userInteractionEnabled = NO;
     self.overlay.mode = MBProgressHUDModeText;
     self.overlay.detailsLabel.text = text;
-    self.overlay.contentColor = HexRGB(0xffffff);
-    self.overlay.bezelView.color = HexRGBWithAlpha(0x000000, 1);
+    self.overlay.contentColor = [UIColor whiteColor]
+    self.overlay.bezelView.color = [UIColor blackColor];
     self.overlay.detailsLabel.font = [UIFont systemFontOfSize:15];
     self.overlay.margin = 10.f;
     self.overlay.removeFromSuperViewOnHide = YES;
@@ -103,8 +103,8 @@ static char activityHUDKey;
     self.activityHUD.mode = MBProgressHUDModeIndeterminate;
     self.activityHUD.label.text = text;
     self.activityHUD.detailsLabel.text = @"";
-    self.activityHUD.contentColor = HexRGB(0xffffff);
-    self.activityHUD.bezelView.color = HexRGBWithAlpha(0x000000, 1);
+    self.activityHUD.contentColor = [UIColor whiteColor]
+    self.activityHUD.bezelView.color = [UIColor blackColor];
     self.activityHUD.label.font = [UIFont systemFontOfSize:15];
     [self.activityHUD showAnimated:YES];
 }
@@ -126,8 +126,8 @@ static char activityHUDKey;
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
     hud.mode = MBProgressHUDModeCustomView;
     hud.detailsLabel.text = text;
-    hud.contentColor = HexRGB(0xffffff);
-    hud.bezelView.color = HexRGBWithAlpha(0x000000, 1);
+    hud.contentColor = [UIColor whiteColor]
+    hud.bezelView.color = [UIColor blackColor];
     hud.detailsLabel.font = [UIFont systemFontOfSize:15];
     hud.margin = 10.f;
     hud.removeFromSuperViewOnHide = YES;
