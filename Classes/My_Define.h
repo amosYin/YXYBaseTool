@@ -8,7 +8,6 @@
 
 #ifndef My_Define_h
 #define My_Define_h
-#include "AppDelegate.h"
 
 #define HexRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -47,7 +46,6 @@ delegate:nil cancelButtonTitle:(buttonName) otherButtonTitles: nil];\
 /**一些缩写*/
 #define kApplication        [UIApplication sharedApplication]
 #define kKeyWindow          [UIApplication sharedApplication].keyWindow
-#define kAppDelegate        ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 #define kUserDefaults       [NSUserDefaults standardUserDefaults]
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 /**APP版本号*/
