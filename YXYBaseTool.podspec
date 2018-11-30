@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform     = :ios
   s.dependency 'MBProgressHUD'
-  
+  s.frameworks = 'AVFoundation','CoreGraphics','Security','SystemConfiguration','CoreData','UIKit'
 end

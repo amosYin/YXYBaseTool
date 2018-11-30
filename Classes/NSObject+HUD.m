@@ -7,29 +7,30 @@
 //
 
 #import "NSObject+HUD.h"
+#import <objc/runtime.h>
 
 @implementation NSObject (HUD)
 
 static char overlayKey;
 
-- (MBProgressHUD *)overlay
-{
-    return objc_getAssociatedObject(self, &overlayKey);
-}
-
-- (void)setOverlay:(MBProgressHUD *)overlay
-{
-    objc_setAssociatedObject(self, &overlayKey, overlay, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-static char activityHUDKey;
-- (MBProgressHUD *)activityHUD
-{
-    return objc_getAssociatedObject(self, &activityHUDKey);
-}
-- (void)setActivityHUD:(MBProgressHUD *)activityHUD
-{
-    objc_setAssociatedObject(self, &activityHUDKey, activityHUD, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//- (MBProgressHUD *)overlay
+//{
+//    return objc_getAssociatedObject(self, &overlayKey);
+//}
+//
+//- (void)setOverlay:(MBProgressHUD *)overlay
+//{
+//    objc_setAssociatedObject(self, &overlayKey, overlay, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//}
+//
+//static char activityHUDKey;
+//- (MBProgressHUD *)activityHUD
+//{
+//    return objc_getAssociatedObject(self, &activityHUDKey);
+//}
+//- (void)setActivityHUD:(MBProgressHUD *)activityHUD
+//{
+//    objc_setAssociatedObject(self, &activityHUDKey, activityHUD, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 #pragma mark - 特殊定义吐司提示 font 不传时默认为15号常规字体
