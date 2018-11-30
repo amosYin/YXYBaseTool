@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+HUD.h"
+#import "My_Define.h"
 
 @implementation NSObject (HUD)
 
