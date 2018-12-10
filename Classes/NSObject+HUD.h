@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
+#import <objc/runtime.h>
+#import "My_Define.h"
 
 @interface NSObject (HUD)<MBProgressHUDDelegate>
 
-#pragma mark - 吐司提示 font 不传时默认为15号常规字体
+#pragma mark - 特殊定义吐司提示 font 不传时默认为15号常规字体
 - (void)showHudText:(NSString *)text afterDelay:(NSTimeInterval)delay font:(UIFont *)font;
 
 #pragma mark - 展示吐司提示信息 (默认提示两秒)
@@ -41,6 +43,5 @@
 
 #pragma mark - alert提示
 - (void)showAlertWithTitle:(NSString *)title;
-
 
 @end
