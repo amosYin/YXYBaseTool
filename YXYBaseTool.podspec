@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/amosYin/YXYBaseTool.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Classes/*.{h,m}", "Classes/**/*.{h,m}"
+  s.source_files  = "Classes/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
   s.requires_arc = true
   s.platform     = :ios
