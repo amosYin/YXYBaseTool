@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MBProgressHUD.h"
-#import <objc/runtime.h>
-#import "My_Define.h"
+
 
 @interface NSObject (HUD)<MBProgressHUDDelegate>
 
