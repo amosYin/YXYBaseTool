@@ -19,8 +19,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "Classes/*.{h,m}", "Classes/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
-  s.requires_arc = false
+  s.requires_arc = true
   s.platform     = :ios
   s.dependency 'MBProgressHUD'
-  s.frameworks = 'AVFoundation','CoreGraphics','Security','SystemConfiguration','CoreData','UIKit'
 end
