@@ -12,7 +12,7 @@
 #import "My_Define.h"
 
 
-@implementation NSObject (HUD)
+@implementation NSObject (HUD)<MBProgressHUDDelegate>
 
 static char overlayKey;
 
