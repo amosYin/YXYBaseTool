@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
+@class MBProgressHUD;
 
 @interface NSObject (HUD)<MBProgressHUDDelegate>
 
