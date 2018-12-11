@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+HUD.h"
-#import "MBProgressHUD.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 #import "objc/runtime.h"
 #import "My_Define.h"
 
