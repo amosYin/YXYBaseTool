@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
   #s.exclude_files = "Classes/Exclude"
   s.requires_arc = true
   s.platform     = :ios,'8.0'
+  s.libraries = 'c++.1'
   s.frameworks = 'UIKit'
   s.dependency 'MBProgressHUD'
 end
