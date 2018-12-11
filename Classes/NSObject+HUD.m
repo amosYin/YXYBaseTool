@@ -11,8 +11,11 @@
 #import "objc/runtime.h"
 #import "My_Define.h"
 
+@interface NSObject ()<MBProgressHUDDelegate>
 
-@implementation NSObject (HUD)<MBProgressHUDDelegate>
+@end
+
+@implementation NSObject (HUD)
 
 static char overlayKey;
 
