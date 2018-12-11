@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
-@interface NSObject (HUD)
+@interface NSObject (HUD) <MBProgressHUDDelegate>
 
 #pragma mark - 特殊定义吐司提示 font 不传时默认为15号常规字体
 - (void)showHudText:(NSString *)text afterDelay:(NSTimeInterval)delay font:(UIFont *)font;
