@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-@class WKWebView;
+#import <WebKit/WebKit.h>
 
 @interface JLXXBaseWebController : BaseViewController
 
