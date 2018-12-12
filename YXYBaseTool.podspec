@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YXYBaseTool"
-  s.version      = "0.1.9"
+  s.version      = "0.2.0"
   s.summary      = "常用工具及宏定义等。"
   s.description  = <<-DESC
   避免每次新建工程一个个导入
