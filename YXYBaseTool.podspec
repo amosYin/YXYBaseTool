@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform     = :ios,'8.0'
   s.libraries = 'c++.1'
-  s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit','Foundation'
   s.dependency 'MBProgressHUD'
 end
