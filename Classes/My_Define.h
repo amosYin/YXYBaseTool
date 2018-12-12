@@ -93,7 +93,9 @@ delegate:nil cancelButtonTitle:(buttonName) otherButtonTitles: nil];\
 
 #define kScreenScal     kScreenWidth/375.00
 
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
 
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 
 #endif /* My_Define_h */
