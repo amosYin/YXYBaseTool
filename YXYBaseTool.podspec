@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YXYBaseTool"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "常用工具及宏定义等。"
   s.description  = <<-DESC
   避免每次新建工程一个个导入
@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform     = :ios,'8.0'
   s.libraries = 'c++.1'
-  s.frameworks = 'UIKit','Foundation'
+  s.frameworks = 'UIKit','Foundation','WebKit'
   s.dependency 'MBProgressHUD'
 end
