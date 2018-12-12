@@ -8,6 +8,7 @@
 
 #import "JLXXBaseWebController.h"
 #import <WebKit/WebKit.h>
+#import "My_Define.h"
 
 @interface JLXXBaseWebController ()<WKNavigationDelegate>
 

@@ -6,9 +6,7 @@
 //  Copyright © 2017年 JLXX. All rights reserved.
 //
 
-#import "BaseViewController.h"
 #import <WebKit/WebKit.h>
-#import "My_Define.h"
 
 @interface JLXXBaseWebController : UIViewController
 
