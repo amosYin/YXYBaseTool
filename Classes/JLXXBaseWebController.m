@@ -7,7 +7,7 @@
 //
 
 #import "JLXXBaseWebController.h"
-
+#import <WebKit/WebKit.h>
 
 @interface JLXXBaseWebController ()<WKNavigationDelegate>
 
@@ -19,15 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, iPhoneX?44:20, kScreenWidth, kScreenHeight)];
-    [self.view addSubview:self.webView];
-    self.webView.scrollView.backgroundColor = [UIColor clearColor];
-    self.webView.navigationDelegate = self;
+    self.webVieww = [[WKWebView alloc]initWithFrame:CGRectMake(0, iPhoneX?44:20, kScreenWidth, kScreenHeight)];
+    [self.view addSubview:self.webVieww];
+    self.webVieww.scrollView.backgroundColor = [UIColor clearColor];
+    self.webVieww.navigationDelegate = self;
     if (@available(iOS 11.0, *)) {
-        self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.webVieww.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_urlString]]];
-    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    [self.webVieww loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_urlString]]];
+    [self.webVieww addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     self.progressView.progress = 0.1;
     
 }
@@ -54,21 +54,21 @@
 
 
 // 页面开始加载时调用
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+- (void)webVieww:(WKWebView *)webVieww didStartProvisionalNavigation:(WKNavigation *)navigation{
     self.progressView.hidden = NO;
 }
 
 // 页面加载完成之后调用
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+- (void)webVieww:(WKWebView *)webVieww didFinishNavigation:(WKNavigation *)navigation{
     self.progressView.hidden = YES;
 }
 // 页面加载失败时调用
-- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation{
+- (void)webVieww:(WKWebView *)webVieww didFailProvisionalNavigation:(WKNavigation *)navigation{
     self.progressView.hidden = YES;
 }
 
 -(void)dealloc{
-    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];;
+    [self.webVieww removeObserver:self forKeyPath:@"estimatedProgress"];;
 }
 
 -(UIProgressView *)progressView{
@@ -78,7 +78,7 @@
         _progressView.trackTintColor = [UIColor whiteColor];
         CGAffineTransform transform = CGAffineTransformMakeScale(1.0f, 2.0f);
         self.progressView.transform = transform;//设定宽高
-        [self.webView addSubview:_progressView];
+        [self.webVieww addSubview:_progressView];
     }
     return _progressView;
 }

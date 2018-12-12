@@ -7,10 +7,10 @@
 //
 
 #import "BaseViewController.h"
-#import <WebKit/WebKit.h>
+@class WKWebView;
 
 @interface JLXXBaseWebController : BaseViewController
 
 @property (nonatomic , strong) NSString *urlString;
-@property (nonatomic , strong) WKWebView *webView;
+@property (nonatomic , strong) WKWebView *webVieww;
 @end
