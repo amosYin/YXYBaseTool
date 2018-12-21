@@ -6,6 +6,7 @@
 //  Copyright © 2018年 com.uqiauto. All rights reserved.
 //
 
+
 // .h文件
 #define TomatoSingletonH(name) + (instancetype)shared##name;
 
